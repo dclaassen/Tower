@@ -6,6 +6,12 @@
         android:id="@+id/menu_connect"
         app:showAsAction="never"
         android:title="@string/menu_disconnect"/>
+    <item
+        android:id="@+id/menu_bluetooth"
+        android:title="Bluetooth" />
+    <item
+        android:id="@+id/menu_btcontroller"
+        android:title="Controller" />
 
     <group
         android:id="@+id/menu_group_connected"
