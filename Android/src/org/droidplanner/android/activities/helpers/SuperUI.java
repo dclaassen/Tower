@@ -32,6 +32,7 @@ import com.o3dr.services.android.lib.model.SimpleCommandListener;
 import org.droidplanner.android.AppService;
 import org.droidplanner.android.DroidPlannerApp;
 import org.droidplanner.android.R;
+import org.droidplanner.android.activities.OverwatchActivity;
 import org.droidplanner.android.dialogs.SlideToUnlockDialog;
 import org.droidplanner.android.dialogs.SupportYesNoDialog;
 import org.droidplanner.android.dialogs.SupportYesNoWithPrefsDialog;
@@ -342,7 +343,13 @@ public abstract class SuperUI extends AppCompatActivity implements DroidPlannerA
             case R.id.menu_connect:
                 toggleDroneConnection();
                 return true;
-
+            case R.id.menu_overwatch:
+                try {
+                    Intent overwatchIntent = new Intent(SuperUI.this, OverwatchActivity.class);
+                    startActivity(overwatchIntent);
+                } catch (Exception e) {
+                    showMessage("Error in Overwatch creation");
+                }
             case R.id.menu_upload_mission: {
                 final MissionProxy missionProxy = dpApp.getMissionProxy();
                 if (missionProxy.getItems().isEmpty() || missionProxy.hasTakeoffAndLandOrRTL()) {
@@ -414,4 +421,12 @@ public abstract class SuperUI extends AppCompatActivity implements DroidPlannerA
         else
             dpApp.connectToDrone();
     }
+
+    //Method which prints a message in the form of a toast (Black Message Box) to the screen
+    private void showMessage(String theMsg) {
+        Toast msg = Toast.makeText(getBaseContext(),
+                theMsg, (Toast.LENGTH_SHORT));
+        msg.show();
+    }
 }
+

@@ -7,12 +7,8 @@
         app:showAsAction="never"
         android:title="@string/menu_disconnect"/>
     <item
-        android:id="@+id/menu_bluetooth"
-        android:title="Bluetooth" />
-    <item
-        android:id="@+id/menu_btcontroller"
-        android:title="Controller" />
-
+        android:id="@+id/menu_overwatch"
+        android:title="Overwatch" />
     <group
         android:id="@+id/menu_group_connected"
         android:enabled="false"
