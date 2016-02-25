@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-
+    <string name="string_overwatch">Overwatch</string>
+    <string name="string_uad_google_maps">UAD GMap</string>
+    <string name="string_bluetooth_setup">BT Setup</string>
+    <string name="string_bluetooth_remote_control">BT Controller</string>
+    <string name="overwatch_menu">Overwatch Menu</string>
     <string name="action_settings">Settings</string>
     <string name="menu">Menu</string>
     <string name="title_activity_bluetooth_serial_communication">BluetoothSerialCommunication

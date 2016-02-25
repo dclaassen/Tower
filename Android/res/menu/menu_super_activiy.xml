@@ -7,8 +7,19 @@
         app:showAsAction="never"
         android:title="@string/menu_disconnect"/>
     <item
-        android:id="@+id/menu_overwatch"
-        android:title="Overwatch" />
+        android:id="@+id/menu_overwatch_activity"
+        android:title="@string/string_overwatch"
+        />
+    <item
+        android:id="@+id/menu_bluetooth_setup"
+        android:title="@string/string_bluetooth_setup" />
+    <item
+        android:id="@+id/menu_btcontroller"
+        android:title="@string/string_bluetooth_remote_control" />
+    <item
+        android:id="@+id/menu_uad_google_maps_activity"
+        android:title="@string/string_uad_google_maps" />
+
     <group
         android:id="@+id/menu_group_connected"
         android:enabled="false"

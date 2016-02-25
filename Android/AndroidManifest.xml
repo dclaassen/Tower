@@ -70,8 +70,30 @@
             android:launchMode="singleTop"
             android:label="@string/account_label"/>
 
-        <activity android:name=".activities.OverwatchActivity"
+        <activity
+            android:name=".activities.OverwatchActivity"
             android:label="@string/Overwatch"/>
+
+        <activity
+            android:name=".activities.BluetoothRemoteControl"
+            android:label="@string/title_activity_bluetooth_remote_control" >
+        </activity>
+
+        <activity
+            android:name=".activities.BluetoothSetup"
+            android:label="@string/title_activity_bluetooth_setup" >
+        </activity>
+
+        <activity
+            android:name=".activities.DeviceListActivity"
+            android:label="@string/title_activity_device_list" >
+        </activity>
+
+        <service
+            android:name=".activities.BluetoothConnectionService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
 
         <activity
             android:name=".activities.FlightActivity"

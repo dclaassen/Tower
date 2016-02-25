@@ -1,23 +1,23 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activities.OverwatchActivity">
-    <item android:id="@+id/action_menu"
-        android:title="@string/top_menu"
-        android:orderInCategory="100"
-        app:showAsAction="never">
+    tools:context=".activities.OverwatchActivity"
+    android:id="@+id/menu_id_overwatch_activity">
 
-        <menu>
-            <item
-                android:id="@+id/menu_bluetooth"
-                android:title="Bluetooth"
-                android:icon="@drawable/bluetooth_icon"/>
-            <item
-                android:id="@+id/menu_btcontroller"
-                android:title="Controller"
-                android:icon="@drawable/btcontroller_icon"/>
 
-        </menu>
-    </item>
+
+    <item
+        android:id="@+id/select_bluetooth_setup_activity"
+
+        android:title="@string/string_bluetooth_setup"
+        android:icon="@drawable/bluetooth_icon"/>
+
+    <item
+        android:id="@+id/select_bluetooth_remote_control_activity"
+
+        android:title="@string/string_bluetooth_remote_control"
+        android:icon="@drawable/btcontroller_icon"/>
 
 </menu>

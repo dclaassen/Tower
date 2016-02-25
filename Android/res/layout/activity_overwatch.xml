@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    tools:context=".activities.Overwatch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
     >
 
-</LinearLayout>
+    <org.droidplanner.android.view.FitsSystemWindowsRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        >
+
+        <include
+            layout="@layout/actionbar_toolbar"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/actionbar_container"
+            />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/button_my_location"
+            android:layout_alignLeft="@+id/actionbar_container"
+            android:layout_alignStart="@+id/actionbar_container"
+            android:layout_below="@+id/editorInfoWindow"
+            android:layout_alignWithParentIfMissing="true"/>
+
+
+    </org.droidplanner.android.view.FitsSystemWindowsRelativeLayout>
+
+</RelativeLayout>

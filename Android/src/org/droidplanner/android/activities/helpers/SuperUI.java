@@ -32,6 +32,8 @@ import com.o3dr.services.android.lib.model.SimpleCommandListener;
 import org.droidplanner.android.AppService;
 import org.droidplanner.android.DroidPlannerApp;
 import org.droidplanner.android.R;
+import org.droidplanner.android.activities.BluetoothRemoteControl;
+import org.droidplanner.android.activities.BluetoothSetup;
 import org.droidplanner.android.activities.OverwatchActivity;
 import org.droidplanner.android.dialogs.SlideToUnlockDialog;
 import org.droidplanner.android.dialogs.SupportYesNoDialog;
@@ -343,12 +345,29 @@ public abstract class SuperUI extends AppCompatActivity implements DroidPlannerA
             case R.id.menu_connect:
                 toggleDroneConnection();
                 return true;
-            case R.id.menu_overwatch:
+            case R.id.menu_uad_google_maps_activity:
                 try {
-                    Intent overwatchIntent = new Intent(SuperUI.this, OverwatchActivity.class);
-                    startActivity(overwatchIntent);
+
+                    return true;
                 } catch (Exception e) {
-                    showMessage("Error in Overwatch creation");
+                    showMessage("Error in UAD Google Maps creation");
+                }
+            case R.id.menu_btcontroller:
+                try {
+                    Intent bluetoothRemoteControlIntent = new Intent(SuperUI.this, BluetoothRemoteControl.class);
+                    startActivity(bluetoothRemoteControlIntent);
+                    return true;
+                } catch (Exception e) {
+                    showMessage("Error in Bluetooth Remote Control creation");
+                }
+
+            case R.id.menu_bluetooth_setup:
+                try {
+                    Intent bluetoothSetupIntent = new Intent(SuperUI.this, BluetoothSetup.class);
+                    startActivity(bluetoothSetupIntent);
+                    return true;
+                } catch (Exception e) {
+                    showMessage("Error in BluetoothSetup creation");
                 }
             case R.id.menu_upload_mission: {
                 final MissionProxy missionProxy = dpApp.getMissionProxy();

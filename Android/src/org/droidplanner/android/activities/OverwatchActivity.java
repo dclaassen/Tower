@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import org.droidplanner.android.R;
 
-/**
- * Created by Daryl on 2/22/2016.
- */
 public class OverwatchActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +20,8 @@ public class OverwatchActivity extends AppCompatActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_overwatch, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_overwatch, menu);
         return true;
     }
 
@@ -33,9 +32,14 @@ public class OverwatchActivity extends AppCompatActivity{
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
         //On whichever click from the menu do one of the following
         switch ((id)) {
-            case R.id.menu_bluetooth:
+            case R.id.select_bluetooth_setup_activity:
                 try {
                     bluetoothSetupSwitchScreensClick();
                     break;
@@ -44,12 +48,12 @@ public class OverwatchActivity extends AppCompatActivity{
                 }
 
                 break;
-            case R.id.menu_btcontroller:
+            case R.id.select_bluetooth_remote_control_activity:
                 try {
                     bluetoothRemoteControlSwitchScreensClick();
                     break;
                 } catch (Exception e) {
-                    showMessage("bluetoothSerialCommunicationsSwi...() E ERROR");
+                    showMessage("bluetoothRemoteControlSwitchScreensClick() E ERROR");
                 }
             default:
                 ;

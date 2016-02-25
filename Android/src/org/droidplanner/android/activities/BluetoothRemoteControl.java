@@ -40,7 +40,7 @@ public class BluetoothRemoteControl extends AppCompatActivity {
             * C:    set the test variable for boundness to true
             * */
             //BluetoothConnectionServiceBinder binder = (BluetoothConnectionServiceBinder) service;
-            bluetoothConnectionServiceBRC = BluetoothSetup.bluetoothConnectionService01;
+           // bluetoothConnectionServiceBRC = BluetoothSetup.bluetoothConnectionService01;
             isBound = true;
         }
 
